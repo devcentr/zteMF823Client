@@ -16,7 +16,7 @@ type SendSMSResponse struct {
 }
 
 func (c *Client) SendSMS(r SendSMSRequest) (*SendSMSResponse, error) {
-	respInterface, err := c.Post(&SendSMSResponse{}, url.Values{
+	respInterface, err := c.post(&SendSMSResponse{}, url.Values{
 		"goformId":    []string{"SEND_SMS"},
 		"notCallback": []string{"true"},
 		"Number":      []string{r.Phone},

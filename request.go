@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func (c *Client) Post(response interface{}, params url.Values) (interface{}, error) {
+func (c *Client) post(response interface{}, params url.Values) (interface{}, error) {
 	requestUrl := "http://" + c.ModemHost + "/goform/goform_set_cmd_process"
 
 	req, err := http.NewRequest("POST", requestUrl, strings.NewReader(params.Encode()))
