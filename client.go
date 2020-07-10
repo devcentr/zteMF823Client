@@ -13,9 +13,9 @@ func NewClient(host string) *Client {
 
 type Client struct {
 	ModemHost  string
-	httpClient *http.Client
+	httpClient HttpClientInterface
 }
 
-func (c *Client) SetCustomClient(client *http.Client) {
+func (c *Client) SetCustomClient(client HttpClientInterface) {
 	c.httpClient = client
 }
