@@ -4,7 +4,7 @@ Golang client for ZTE MF823 4G modem
 ### Usage:
 Get package:
 
-`go get github.com/devcentr/zteMF823Client``
+``go get github.com/devcentr/zteMF823Client``
 
 Create client
 
